@@ -1,0 +1,25 @@
+---
+layout: "default"
+full_title: "Freelance Hourly Rate Calculator | Work.Style"
+description: "Work out the hourly rate you need to cover income goals, costs, taxes and time off."
+canon: "https://work.style/tools/freelance-rate.html"
+pre: "../"
+nav_key: "tools/"
+jsonld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Freelance Hourly Rate Calculator\", \"applicationCategory\": \"BusinessApplication\", \"operatingSystem\": \"Any\", \"offers\": {\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\"}}</script>"
+extra_head: ""
+scripts: "<script>(function(){var g=function(i){return +document.getElementById(i).value||0};\nfunction c(){var gross=g(\"fr-i\")/(1-Math.min(g(\"fr-t\"),95)/100)+g(\"fr-c\"),bh=(52-g(\"fr-v\"))*g(\"fr-h\")*g(\"fr-b\")/100,r=bh?gross/bh:0;\ndocument.getElementById(\"fr-r\").textContent=\"$\"+Math.ceil(r)+\"/h\";document.getElementById(\"fr-d\").textContent=\"$\"+Math.round(r*8).toLocaleString();\ndocument.getElementById(\"fr-g\").textContent=\"$\"+Math.round(gross).toLocaleString();document.getElementById(\"fr-bh\").textContent=Math.round(bh).toLocaleString();}\ndocument.getElementById(\"fr\").addEventListener(\"input\",c);c();})();</script>"
+basetag: ""
+---
+<div class="wrap page-head"><p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Tools</a></p><h1 style="max-width:18ch">Freelance Hourly Rate Calculator</h1><p class="lede">Work out the hourly rate you need to cover income goals, costs, taxes and time off.</p></div>
+<div class="wrap"><div class="calc"><form class="panel form" id="fr" onsubmit="return false">
+ <div class="row"><div><label for="fr-i">Target take-home income per year</label><input id="fr-i" type="number" min="0" step="1000" value="70000"></div>
+ <div><label for="fr-c">Business costs per year</label><input id="fr-c" type="number" min="0" step="500" value="8000"></div></div>
+ <div class="row"><div><label for="fr-t">Tax rate estimate (%)</label><input id="fr-t" type="number" min="0" max="70" value="28"></div>
+ <div><label for="fr-v">Weeks off per year</label><input id="fr-v" type="number" min="0" max="26" value="6"></div></div>
+ <div class="row"><div><label for="fr-h">Hours worked per week</label><input id="fr-h" type="number" min="1" max="80" value="40"></div>
+ <div><label for="fr-b">Share of hours that are billable (%)</label><input id="fr-b" type="number" min="5" max="100" value="65"></div></div>
+ <p class="form-note">Billable share accounts for admin, sales and learning time. Tax rules vary — check with an accountant.</p>
+</form>
+<div class="panel pencil" aria-live="polite"><p class="mt0">Charge at least</p><p class="big-num" id="fr-r">$0/h</p><p>That's <strong id="fr-d">$0</strong> per 8-hour day and <strong id="fr-g">$0</strong> gross revenue a year across <strong id="fr-bh">0</strong> billable hours.</p></div></div>
+<div class="article" style="margin:40px 0"><h2>How to use it</h2><p>Freelancers often price from what employees earn per hour and end up underpaid, because they forget unpaid admin time, costs, taxes and holidays. This calculator works backwards from the income you want to the rate you need.</p><p class="form-note">Results are estimates for planning only. Nothing you enter leaves your browser.</p></div>
+<h2>More free tools</h2><div class="grid-3" style="margin-bottom:50px"><a class="tile" href="meeting-cost.html"><h3>Meeting Cost Calculator</h3><p>Calculate what a meeting really costs in salary time — one-off or recurring — and see the yearly total.</p></a><a class="tile" href="commute-savings.html"><h3>Commute Savings Calculator</h3><p>See how many hours and how much money working from home saves each week and year.</p></a><a class="tile" href="focus-timer.html"><h3>Focus Timer (Pomodoro and Deep Work)</h3><p>A free online focus timer with Pomodoro 25/5, 50/10 and 90-minute deep-work presets.</p></a><a class="tile" href="desk-setup.html"><h3>Desk and Monitor Height Calculator</h3><p>Get suggested chair, desk and monitor heights for your height, in centimetres or inches.</p></a><a class="tile" href="hybrid-planner.html"><h3>Hybrid Week Planner</h3><p>Plan your home and office days and see your weekly commute time and collaboration balance.</p></a></div></div>

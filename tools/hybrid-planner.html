@@ -1,0 +1,21 @@
+---
+layout: "default"
+full_title: "Hybrid Week Planner | Work.Style"
+description: "Plan your home and office days and see your weekly commute time and collaboration balance."
+canon: "https://work.style/tools/hybrid-planner.html"
+pre: "../"
+nav_key: "tools/"
+jsonld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Hybrid Week Planner\", \"applicationCategory\": \"BusinessApplication\", \"operatingSystem\": \"Any\", \"offers\": {\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\"}}</script>"
+extra_head: ""
+scripts: "<script>(function(){var w=document.getElementById(\"hp-week\"),t=document.getElementById(\"hp-t\");\nfunction c(){var o=w.querySelectorAll('[data-mode=office]').length,h=5-o;document.getElementById(\"hp-sum\").textContent=o+\" office, \"+h+\" home\";\ndocument.getElementById(\"hp-c\").textContent=(o*2*(+t.value||0)/60).toFixed(1)+\" h\";\ndocument.getElementById(\"hp-tip\").textContent=o===0?\"Fully remote: plan regular live collaboration so nobody drifts.\":o>=4?\"Mostly office: protect at least one focus block a day.\":o===1?\"One anchor day suits deep-focus styles. Pack it with together-work.\":\"A balanced week. Make your office days consecutive so the team overlaps.\";}\nw.addEventListener(\"click\",function(e){var b=e.target.closest(\"button\");if(!b)return;var m=b.dataset.mode===\"home\"?\"office\":\"home\";b.dataset.mode=m;b.innerHTML=b.textContent.slice(0,3)+\"<br>\"+(m===\"home\"?\"Home\":\"Office\");c();});\nt.addEventListener(\"input\",c);c();})();</script>"
+basetag: ""
+---
+<div class="wrap page-head"><p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Tools</a></p><h1 style="max-width:18ch">Hybrid Week Planner</h1><p class="lede">Plan your home and office days and see your weekly commute time and collaboration balance.</p></div>
+<div class="wrap"><div class="calc"><div class="panel">
+ <p class="mt0">Tap a day to switch it between home and office.</p>
+ <div class="week" id="hp-week"><button data-mode="home">Mon<br>Home</button><button data-mode="office">Tue<br>Office</button><button data-mode="office">Wed<br>Office</button><button data-mode="home">Thu<br>Home</button><button data-mode="home">Fri<br>Home</button></div>
+ <div class="form" style="margin-top:18px"><div><label for="hp-t">One-way commute (minutes)</label><input id="hp-t" type="number" min="0" value="40"></div></div>
+</div>
+<div class="panel teal" aria-live="polite"><p class="mt0">Your week</p><p class="big-num" id="hp-sum">2 office · 3 home</p><p>Weekly commute: <strong id="hp-c">0 h</strong>. <span id="hp-tip"></span></p><p class="form-note">Plan together-work (workshops, one-to-ones) for office days and focus work for home days. <a href="../guides/hybrid-work-schedule.html">Read the hybrid guide</a>.</p></div></div>
+<div class="article" style="margin:40px 0"><h2>How to use it</h2><p>A hybrid week works when office days are for collaboration and home days are for focus. Mark your days, check the commute load, and then move your meetings to match. For team-wide schedules, see <a href="../teams.html">team assessments</a>.</p><p class="form-note">Results are estimates for planning only. Nothing you enter leaves your browser.</p></div>
+<h2>More free tools</h2><div class="grid-3" style="margin-bottom:50px"><a class="tile" href="meeting-cost.html"><h3>Meeting Cost Calculator</h3><p>Calculate what a meeting really costs in salary time — one-off or recurring — and see the yearly total.</p></a><a class="tile" href="commute-savings.html"><h3>Commute Savings Calculator</h3><p>See how many hours and how much money working from home saves each week and year.</p></a><a class="tile" href="focus-timer.html"><h3>Focus Timer (Pomodoro and Deep Work)</h3><p>A free online focus timer with Pomodoro 25/5, 50/10 and 90-minute deep-work presets.</p></a><a class="tile" href="desk-setup.html"><h3>Desk and Monitor Height Calculator</h3><p>Get suggested chair, desk and monitor heights for your height, in centimetres or inches.</p></a><a class="tile" href="freelance-rate.html"><h3>Freelance Hourly Rate Calculator</h3><p>Work out the hourly rate you need to cover income goals, costs, taxes and time off.</p></a></div></div>
