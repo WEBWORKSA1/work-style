@@ -1,0 +1,24 @@
+---
+layout: "default"
+full_title: "Meeting Cost Calculator | Work.Style"
+description: "Calculate what a meeting really costs in salary time — one-off or recurring — and see the yearly total."
+canon: "https://work.style/tools/meeting-cost.html"
+pre: "../"
+nav_key: "tools/"
+jsonld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Meeting Cost Calculator\", \"applicationCategory\": \"BusinessApplication\", \"operatingSystem\": \"Any\", \"offers\": {\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\"}}</script>"
+extra_head: ""
+scripts: "<script>(function(){var g=function(i){return +document.getElementById(i).value||0},f=function(n){return \"$\"+Math.round(n).toLocaleString()};\nfunction c(){var h=g(\"mc-s\")*g(\"mc-o\")/2080,one=h*g(\"mc-n\")*g(\"mc-m\")/60,fr=g(\"mc-f\");\ndocument.getElementById(\"mc-one\").textContent=f(one);document.getElementById(\"mc-yr\").textContent=f(one*fr);\ndocument.getElementById(\"mc-hr\").textContent=Math.round(g(\"mc-n\")*g(\"mc-m\")/60*fr).toLocaleString();\nvar m=g(\"mc-m\");document.getElementById(\"mc-save\").textContent=f(m>25?h*g(\"mc-n\")*(m-25)/60*fr:0);}\ndocument.getElementById(\"mc\").addEventListener(\"input\",c);c();})();</script>"
+basetag: ""
+---
+<div class="wrap page-head"><p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Tools</a></p><h1 style="max-width:18ch">Meeting Cost Calculator</h1><p class="lede">Calculate what a meeting really costs in salary time — one-off or recurring — and see the yearly total.</p></div>
+<div class="wrap"><div class="calc"><form class="panel form" id="mc" onsubmit="return false">
+ <div class="row"><div><label for="mc-n">People attending</label><input id="mc-n" type="number" min="1" value="6"></div>
+ <div><label for="mc-m">Length (minutes)</label><input id="mc-m" type="number" min="5" step="5" value="60"></div></div>
+ <div class="row"><div><label for="mc-s">Average annual salary</label><input id="mc-s" type="number" min="0" step="1000" value="75000"></div>
+ <div><label for="mc-o">Overhead multiplier</label><input id="mc-o" type="number" min="1" step="0.05" value="1.3"></div></div>
+ <div><label for="mc-f">How often</label><select id="mc-f"><option value="1">Once</option><option value="52" selected>Weekly</option><option value="26">Every two weeks</option><option value="12">Monthly</option><option value="260">Daily (weekdays)</option></select></div>
+ <p class="form-note">Hourly cost = salary × overhead ÷ 2,080 working hours. Overhead covers benefits, payroll taxes and equipment; 1.25–1.4 is a common range.</p>
+</form>
+<div class="panel pencil" aria-live="polite"><p class="mt0">This meeting costs</p><p class="big-num" id="mc-one">$0</p><p>each time, and <strong id="mc-yr">$0</strong> a year at this frequency — <strong id="mc-hr">0</strong> person-hours.</p><p class="form-note">Cut it to 25 minutes and save <strong id="mc-save">$0</strong> a year.</p></div></div>
+<div class="article" style="margin:40px 0"><h2>How to use it</h2><p>Meetings are where many teams lose the most time without noticing. The calculator multiplies the number of people by their hourly cost and the meeting length, then by how often the meeting happens. Use it before adding a recurring meeting to your calendar, or during a quarterly calendar audit. Pair it with our guide to <a href="../guides/meeting-hygiene.html">meeting hygiene</a>.</p><p class="form-note">Results are estimates for planning only. Nothing you enter leaves your browser.</p></div>
+<h2>More free tools</h2><div class="grid-3" style="margin-bottom:50px"><a class="tile" href="commute-savings.html"><h3>Commute Savings Calculator</h3><p>See how many hours and how much money working from home saves each week and year.</p></a><a class="tile" href="focus-timer.html"><h3>Focus Timer (Pomodoro and Deep Work)</h3><p>A free online focus timer with Pomodoro 25/5, 50/10 and 90-minute deep-work presets.</p></a><a class="tile" href="desk-setup.html"><h3>Desk and Monitor Height Calculator</h3><p>Get suggested chair, desk and monitor heights for your height, in centimetres or inches.</p></a><a class="tile" href="hybrid-planner.html"><h3>Hybrid Week Planner</h3><p>Plan your home and office days and see your weekly commute time and collaboration balance.</p></a><a class="tile" href="freelance-rate.html"><h3>Freelance Hourly Rate Calculator</h3><p>Work out the hourly rate you need to cover income goals, costs, taxes and time off.</p></a></div></div>

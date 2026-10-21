@@ -1,0 +1,25 @@
+---
+layout: "default"
+full_title: "Commute Savings Calculator | Work.Style"
+description: "See how many hours and how much money working from home saves each week and year."
+canon: "https://work.style/tools/commute-savings.html"
+pre: "../"
+nav_key: "tools/"
+jsonld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Commute Savings Calculator\", \"applicationCategory\": \"BusinessApplication\", \"operatingSystem\": \"Any\", \"offers\": {\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\"}}</script>"
+extra_head: ""
+scripts: "<script>(function(){var g=function(i){return +document.getElementById(i).value||0};\nfunction c(){var d=g(\"cs-d\")*g(\"cs-w\"),hrs=d*g(\"cs-t\")*2/60,money=d*(g(\"cs-c\")+g(\"cs-l\")-g(\"cs-h\"));\ndocument.getElementById(\"cs-hrs\").textContent=Math.round(hrs).toLocaleString()+\" h\";document.getElementById(\"cs-days\").textContent=Math.round(hrs/8);\ndocument.getElementById(\"cs-money\").textContent=\"$\"+Math.round(money).toLocaleString();}\ndocument.getElementById(\"cs\").addEventListener(\"input\",c);c();})();</script>"
+basetag: ""
+---
+<div class="wrap page-head"><p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Tools</a></p><h1 style="max-width:18ch">Commute Savings Calculator</h1><p class="lede">See how many hours and how much money working from home saves each week and year.</p></div>
+<div class="wrap"><div class="calc"><form class="panel form" id="cs" onsubmit="return false">
+ <div class="row"><div><label for="cs-t">One-way commute (minutes)</label><input id="cs-t" type="number" min="0" value="40"></div>
+ <div><label for="cs-d">Remote days per week</label><input id="cs-d" type="number" min="0" max="7" value="3"></div></div>
+ <div class="row"><div><label for="cs-c">Travel cost per round trip</label><input id="cs-c" type="number" min="0" step="0.5" value="12"></div>
+ <div><label for="cs-l">Lunch and coffee per office day</label><input id="cs-l" type="number" min="0" step="0.5" value="14"></div></div>
+ <div class="row"><div><label for="cs-h">Extra home costs per remote day</label><input id="cs-h" type="number" min="0" step="0.5" value="3"></div>
+ <div><label for="cs-w">Working weeks per year</label><input id="cs-w" type="number" min="1" max="52" value="46"></div></div>
+ <p class="form-note">Travel cost: fuel, parking, transit fare or a per-km rate. Home costs: heating, power and snacks.</p>
+</form>
+<div class="panel teal" aria-live="polite"><p class="mt0">Working remotely saves you</p><p class="big-num" id="cs-hrs">0 h</p><p>of commuting a year — about <strong id="cs-days">0</strong> full eight-hour days — and <strong id="cs-money">$0</strong> a year after extra home costs.</p></div></div>
+<div class="article" style="margin:40px 0"><h2>How to use it</h2><p>A commute costs time and money, and remote work shifts some of those costs to your home. This calculator nets out both so you can compare options honestly — useful when negotiating a hybrid arrangement or comparing job offers. Read the <a href="../guides/remote-work-guide.html">complete remote work guide</a> next.</p><p class="form-note">Results are estimates for planning only. Nothing you enter leaves your browser.</p></div>
+<h2>More free tools</h2><div class="grid-3" style="margin-bottom:50px"><a class="tile" href="meeting-cost.html"><h3>Meeting Cost Calculator</h3><p>Calculate what a meeting really costs in salary time — one-off or recurring — and see the yearly total.</p></a><a class="tile" href="focus-timer.html"><h3>Focus Timer (Pomodoro and Deep Work)</h3><p>A free online focus timer with Pomodoro 25/5, 50/10 and 90-minute deep-work presets.</p></a><a class="tile" href="desk-setup.html"><h3>Desk and Monitor Height Calculator</h3><p>Get suggested chair, desk and monitor heights for your height, in centimetres or inches.</p></a><a class="tile" href="hybrid-planner.html"><h3>Hybrid Week Planner</h3><p>Plan your home and office days and see your weekly commute time and collaboration balance.</p></a><a class="tile" href="freelance-rate.html"><h3>Freelance Hourly Rate Calculator</h3><p>Work out the hourly rate you need to cover income goals, costs, taxes and time off.</p></a></div></div>
