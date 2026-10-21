@@ -1,0 +1,49 @@
+---
+layout: "default"
+full_title: "Support Work.Style"
+description: "Help keep Work.Style's assessment, tools and guides free for everyone. One-time or monthly support for operations, new tools, prizes and creators."
+canon: "https://work.style/support.html"
+pre: ""
+nav_key: "support.html"
+jsonld: ""
+extra_head: ""
+scripts: ""
+basetag: ""
+---
+<div class="wrap page-head"><h1>Keep Work.Style free</h1><p class="lede">No paywalls and no account needed — for anyone, anywhere. Reader support pays for hosting, new tools, research and the contest prizes.</p></div>
+<div class="wrap grid-2" style="padding-bottom:40px;align-items:start">
+ <div class="panel">
+  <h2 style="font-size:1.5rem">Choose your support</h2>
+  <div class="tiers" style="grid-template-columns:1fr 1fr;margin:16px 0">
+   <button type="button" class="tier" data-amount="5" aria-pressed="false"><span>Coffee</span><strong>$5</strong><small>Keeps the timers ticking</small></button>
+   <button type="button" class="tier" data-amount="25" aria-pressed="true"><span>Supporter</span><strong>$25</strong><small>Funds one new guide</small></button>
+   <button type="button" class="tier" data-amount="100" aria-pressed="false"><span>Patron</span><strong>$100</strong><small>Funds a monthly prize</small></button>
+   <button type="button" class="tier" data-amount="500" aria-pressed="false"><span>Builder</span><strong>$500</strong><small>Funds a new free tool</small></button>
+  </div>
+  <div id="pay-links" style="display:flex;gap:10px;flex-wrap:wrap"></div>
+  <p class="form-note" id="pay-note" hidden>Payments are processed securely by the provider. Work.Style never sees your card details.</p>
+  <form class="form" data-form="Support pledge" data-redirect="thank-you.html" style="margin-top:16px">
+   <div class="hp"><label>Leave empty<input name="_hp" tabindex="-1" autocomplete="off"></label></div>
+   <p style="margin:0">Pledge your support and we'll send you a secure payment link and receipt.</p>
+   <div class="row"><div><label for="amount">Amount (USD)</label><input id="amount" name="amount" type="number" min="1" value="25" required></div>
+   <div><label for="s-freq">Frequency</label><select id="s-freq" name="frequency"><option>One-time</option><option>Monthly</option><option>Yearly</option></select></div></div>
+   <div><label for="s-purpose">Put it toward</label><select id="s-purpose" name="purpose"><option>Wherever it's needed most</option><option>Ongoing operations and hosting</option><option>New free tools</option><option>Contest prizes</option><option>Promotion and marketing</option><option>Hiring writers and creators</option></select></div>
+   <div class="row"><div><label for="s-name">Name</label><input id="s-name" name="name" type="text" required autocomplete="name"></div>
+   <div><label for="s-email">Email</label><input id="s-email" name="email" type="email" required autocomplete="email"></div></div>
+   <label class="check"><input type="checkbox" name="public_thanks" value="yes"> Thank me by name on the supporters page</label>
+   <button class="btn teal" type="submit">Pledge my support</button><p class="form-status" aria-live="polite"></p>
+  </form>
+ </div>
+ <div>
+  <h2 style="font-size:1.5rem">Where the money goes</h2>
+  <table class="article" style="display:table;width:100%;border-collapse:collapse;margin-bottom:24px">
+   <tr><td style="padding:10px;border-bottom:1px solid var(--line)">Operations, hosting and security</td><td style="padding:10px;border-bottom:1px solid var(--line);text-align:right">30%</td></tr>
+   <tr><td style="padding:10px;border-bottom:1px solid var(--line)">New tools and research</td><td style="padding:10px;border-bottom:1px solid var(--line);text-align:right">30%</td></tr>
+   <tr><td style="padding:10px;border-bottom:1px solid var(--line)">Writers, creators and coaches</td><td style="padding:10px;border-bottom:1px solid var(--line);text-align:right">20%</td></tr>
+   <tr><td style="padding:10px;border-bottom:1px solid var(--line)">Contest prizes</td><td style="padding:10px;border-bottom:1px solid var(--line);text-align:right">10%</td></tr>
+   <tr><td style="padding:10px">Promotion and outreach</td><td style="padding:10px;text-align:right">10%</td></tr>
+  </table>
+  <div class="panel pencil"><h3>Other ways to help</h3><ul><li>Share the <a href="quiz.html">assessment</a> with your team</li><li>Sponsor a contest prize or a tool — see <a href="advertise.html">sponsorship</a></li><li>Write or film for us — see <a href="careers.html">open roles</a></li><li>Tell us what to build next on the <a href="contact.html">contact page</a></li></ul></div>
+  <p class="form-note" style="margin-top:16px">Work.Style is an independent website, not a registered charity. Contributions are not tax-deductible.</p>
+ </div>
+</div>
