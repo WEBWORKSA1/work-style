@@ -1,0 +1,46 @@
+---
+layout: "default"
+full_title: "Free Work Style Assessment (5 Minutes) | Work.Style"
+description: "A free 20-question work style test. Find out if you're a Cartographer, Tinkerer, Mentor, Collaborator, Sprinter, Scout, Coordinator or Catalyst — and where you work best."
+canon: "https://work.style/quiz.html"
+pre: ""
+nav_key: "quiz.html"
+jsonld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Work Style Assessment\", \"applicationCategory\": \"EducationalApplication\", \"operatingSystem\": \"Any\", \"offers\": {\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\"}}</script>"
+extra_head: ""
+scripts: "<script>\n(function(){\n var Q=window.WS_Q, box=document.getElementById(\"qs\"), bar=document.getElementById(\"qbar\"), cnt=document.getElementById(\"qcount\");\n var labels=[\"Strongly disagree\",\"Disagree\",\"Neutral\",\"Agree\",\"Strongly agree\"];\n Q.forEach(function(q,i){\n  var d=document.createElement(\"fieldset\");d.className=\"q\";d.style.border=\"1px solid var(--line)\";\n  var h='<legend class=\"visually-hidden\">Question '+(i+1)+'</legend><p>'+(i+1)+'. '+q.t+'</p><div class=\"scale\">';\n  labels.forEach(function(l,j){h+='<label><input type=\"radio\" name=\"q'+i+'\" value=\"'+(j-2)+'\" required> '+l+'</label>';});\n  d.innerHTML=h+'</div>';box.appendChild(d);\n });\n function prog(){var n=box.querySelectorAll(\"input:checked\").length;bar.style.width=(n/Q.length*100)+\"%\";cnt.textContent=n+\" of \"+Q.length+\" answered\";}\n box.addEventListener(\"change\",prog);prog();\n function score(vals){var t={focus:0,energy:0,structure:0,place:0},m={focus:0,energy:0,structure:0,place:0};\n  Q.forEach(function(q,i){t[q.a]+=vals[i]*q.d;m[q.a]+=2;});\n  var o={};for(var k in t)o[k]=Math.round((t[k]+m[k])/(2*m[k])*100);return o;}\n function show(o){\n  var st=window.WS_pick(o.focus,o.energy,o.structure), r=document.getElementById(\"result\");\n  document.getElementById(\"r-name\").textContent=st.name;\n  document.getElementById(\"r-short\").textContent=st.short;\n  document.getElementById(\"r-place\").textContent=window.WS_place(o.place);\n  document.getElementById(\"r-link\").href=\"styles/\"+st.slug+\".html\";\n  var axes=[[\"focus\",\"Deep focus\",\"Quick sprints\"],[\"energy\",\"Independent\",\"Collaborative\"],[\"structure\",\"Planned\",\"Flexible\"],[\"place\",\"Home\",\"Office\"]];\n  document.getElementById(\"r-bars\").innerHTML=axes.map(function(a){return '<div class=\"rb\"><div class=\"ends\"><span>'+a[1]+'</span><span>'+a[2]+'</span></div><div class=\"track\" role=\"img\" aria-label=\"'+a[1]+' to '+a[2]+': '+o[a[0]]+' of 100\"><i style=\"left:'+o[a[0]]+'%\"></i></div></div>';}).join(\"\");\n  document.getElementById(\"r-str\").innerHTML=st.strengths.map(function(x){return \"<li>\"+x+\"</li>\"}).join(\"\");\n  document.getElementById(\"r-watch\").innerHTML=st.watch.map(function(x){return \"<li>\"+x+\"</li>\"}).join(\"\");\n  document.getElementById(\"r-env\").textContent=st.env;\n  document.getElementById(\"r-methods\").textContent=st.methods.join(\", \");\n  var code=[o.focus,o.energy,o.structure,o.place].join(\"-\");\n  var url=location.origin+location.pathname+\"#r=\"+code;\n  document.getElementById(\"r-share\").value=url;\n  var rf=document.getElementById(\"report-form\");rf._extra=function(){return {result:st.name+\" (\"+code+\")\",place:window.WS_place(o.place)};};\n  r.hidden=false;document.getElementById(\"quiz-form\").hidden=true;r.scrollIntoView({behavior:\"smooth\"});\n  history.replaceState(null,\"\",\"#r=\"+code);\n }\n document.getElementById(\"quiz-form\").addEventListener(\"submit\",function(e){\n  e.preventDefault();var vals=[],miss=-1;\n  Q.forEach(function(q,i){var c=box.querySelector('input[name=q'+i+']:checked');if(!c&&miss<0)miss=i;vals.push(c?+c.value:0);});\n  if(miss>=0){var el=box.querySelectorAll(\".q\")[miss];el.scrollIntoView({behavior:\"smooth\",block:\"center\"});el.querySelector(\"input\").focus();document.getElementById(\"qmiss\").textContent=\"Question \"+(miss+1)+\" still needs an answer.\";return;}\n  show(score(vals));\n });\n document.getElementById(\"r-copy\").addEventListener(\"click\",function(){var i=document.getElementById(\"r-share\");i.select();try{navigator.clipboard.writeText(i.value);}catch(e){document.execCommand(\"copy\");}this.textContent=\"Link copied\";});\n document.getElementById(\"r-again\").addEventListener(\"click\",function(){history.replaceState(null,\"\",location.pathname);location.reload();});\n var m=location.hash.match(/r=(\\d+)-(\\d+)-(\\d+)-(\\d+)/);\n if(m)show({focus:+m[1],energy:+m[2],structure:+m[3],place:+m[4]});\n})();\n</script>"
+basetag: ""
+---
+<div class="wrap page-head"><h1>The Work Style Assessment</h1>
+<p class="lede">Twenty statements. For each one, choose how much it sounds like you at work. There are no right answers — and no sign-up.</p></div>
+<div class="wrap" style="padding-bottom:40px">
+ <form id="quiz-form" class="quiz" novalidate>
+  <div class="progress"><div class="bar"><i id="qbar"></i></div><p class="form-note" id="qcount" style="margin:6px 0 0"></p></div>
+  <div id="qs"></div>
+  <p class="form-status err" id="qmiss" aria-live="polite"></p>
+  <button class="btn pencil" type="submit">See my work style</button>
+ </form>
+ <div id="result" hidden class="quiz">
+  <p class="form-note">Your result</p>
+  <h2 id="r-name" style="font-size:clamp(2.2rem,5vw,3.4rem)"></h2>
+  <p class="lede" id="r-short" style="font-size:1.15rem"></p>
+  <span class="place-tag" id="r-place"></span>
+  <div class="result-bars" id="r-bars"></div>
+  <div class="grid-2"><div class="panel"><h3>Strengths</h3><ul id="r-str"></ul></div><div class="panel"><h3>Watch-outs</h3><ul id="r-watch"></ul></div></div>
+  <div class="panel" style="margin-top:20px"><h3>Where you work best</h3><p id="r-env"></p><p><strong>Methods to try:</strong> <span id="r-methods"></span></p><a class="btn" id="r-link" href="#">Read your full profile</a></div>
+  <div class="panel pencil" style="margin-top:20px">
+   <h3>Email me my full report and a team guide</h3>
+   <p>Get a printable summary of your result, a weekly schedule template for your style and a guide to working with the other seven styles.</p>
+   <form class="form" id="report-form" data-form="Assessment report request" data-ok="Done. Your report is on its way — check your inbox within two business days.">
+    <div class="hp"><label>Leave empty<input name="_hp" tabindex="-1" autocomplete="off"></label></div>
+    <div class="row"><div><label for="rf-name">First name</label><input id="rf-name" name="name" type="text" required autocomplete="given-name"></div>
+    <div><label for="rf-email">Email</label><input id="rf-email" name="email" type="email" required autocomplete="email"></div></div>
+    <div><label for="rf-role">Which best describes you?</label><select id="rf-role" name="role"><option>Individual contributor</option><option>Manager or team lead</option><option>Founder or executive</option><option>HR or people team</option><option>Freelancer</option><option>Student</option></select></div>
+    <label class="check"><input type="checkbox" name="newsletter" value="yes" checked> Also send me the Thursday note (one email a week, unsubscribe any time)</label>
+    <button class="btn" type="submit">Email my report</button><p class="form-status" aria-live="polite"></p>
+   </form>
+  </div>
+  <div class="panel" style="margin-top:20px"><h3>Share your result</h3><div class="row form"><input id="r-share" type="text" readonly aria-label="Shareable result link"><button class="btn alt small" id="r-copy" type="button">Copy link</button></div>
+  <p style="margin-top:14px">Managing a team? <a href="teams.html">Map everyone's style on one page</a>. <button class="btn small alt" id="r-again" type="button" style="margin-left:8px">Retake</button></p></div>
+  <p class="form-note" style="margin-top:20px">This assessment is for self-reflection and is not a psychological, clinical or hiring instrument. See <a href="about.html#method">our methodology</a>.</p>
+ </div>
+</div>
