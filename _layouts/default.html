@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+{{ page.basetag }}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.full_title | escape }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+<link rel="canonical" href="{{ page.canon }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Work.Style">
+<meta property="og:title" content="{{ page.full_title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ page.canon }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#172033">
+<meta name="google-adsense-account" content="ca-pub-6620975821265271">
+<link rel="icon" href="{{ page.pre }}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="{{ page.pre }}site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ page.pre }}assets/css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+{{ page.jsonld }}
+{{ page.extra_head }}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="owner-strip">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership — <a href="https://web.works/contact" target="_blank" rel="noopener">contact here</a></div>
+<header class="site-head">
+ <div class="wrap head-row">
+  <a class="brand" href="{{ page.pre }}index.html" aria-label="Work.Style home"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="10" fill="#172033"/><path d="M9 13l4.5 14L18 16l4.5 11L27 13" fill="none" stroke="#F6F7F4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31.5" cy="27" r="3" fill="#E8B531"/></svg><span>Work<span class="dot">.</span>Style</span></a>
+  <button class="icon-btn menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  <nav class="nav" id="nav" aria-label="Main"><a href="{{ page.pre }}quiz.html"{% if page.nav_key == "quiz.html" %} aria-current="page"{% endif %}>Assessment</a><a href="{{ page.pre }}styles/"{% if page.nav_key == "styles/" %} aria-current="page"{% endif %}>Work styles</a><a href="{{ page.pre }}tools/"{% if page.nav_key == "tools/" %} aria-current="page"{% endif %}>Tools</a><a href="{{ page.pre }}guides/"{% if page.nav_key == "guides/" %} aria-current="page"{% endif %}>Guides</a><a href="{{ page.pre }}videos.html"{% if page.nav_key == "videos.html" %} aria-current="page"{% endif %}>Videos</a><a href="{{ page.pre }}teams.html"{% if page.nav_key == "teams.html" %} aria-current="page"{% endif %}>For teams</a><a href="{{ page.pre }}contests.html"{% if page.nav_key == "contests.html" %} aria-current="page"{% endif %}>Contests</a><a href="{{ page.pre }}support.html"{% if page.nav_key == "support.html" %} aria-current="page"{% endif %}>Support</a><a class="btn small pencil" href="{{ page.pre }}quiz.html">Find my style</a>
+   <button class="icon-btn" data-theme-toggle aria-label="Switch light or dark theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+  </nav>
+ </div>
+</header>
+<main id="main">
+{{ content }}
+</main>
+<footer class="site-foot">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div>
+    <a class="brand" href="{{ page.pre }}index.html" style="color:#fff"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="10" fill="#172033"/><path d="M9 13l4.5 14L18 16l4.5 11L27 13" fill="none" stroke="#F6F7F4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31.5" cy="27" r="3" fill="#E8B531"/></svg><span>Work<span class="dot">.</span>Style</span></a>
+    <p style="margin-top:14px">Find how you work best — then build the days, desk and team around it.</p>
+    <form class="form" data-form="Newsletter signup" data-ok="You're on the list. The next issue lands Thursday." style="margin-top:14px">
+     <label for="nl-email" style="color:#fff">The Thursday note: one work-style idea a week</label>
+     <div class="hp"><label>Leave empty<input name="_hp" tabindex="-1" autocomplete="off"></label></div>
+     <input id="nl-email" type="email" name="email" placeholder="you@company.com" required autocomplete="email">
+     <select name="work_model" aria-label="How do you work now?"><option value="">How do you work now? (optional)</option><option>Remote</option><option>Hybrid</option><option>Office</option><option>Freelance / self-employed</option></select>
+     <button class="btn pencil" type="submit">Subscribe</button>
+     <p class="form-status" aria-live="polite"></p>
+    </form>
+   </div>
+   <div><h4>Explore</h4><ul>
+    <li><a href="{{ page.pre }}quiz.html">Work Style Assessment</a></li><li><a href="{{ page.pre }}styles/">The 8 work styles</a></li>
+    <li><a href="{{ page.pre }}tools/">Free tools</a></li><li><a href="{{ page.pre }}guides/">Guides</a></li><li><a href="{{ page.pre }}videos.html">Videos</a></li></ul></div>
+   <div><h4>Get involved</h4><ul>
+    <li><a href="{{ page.pre }}teams.html">Team assessments</a></li><li><a href="{{ page.pre }}contests.html">Contests &amp; prizes</a></li>
+    <li><a href="{{ page.pre }}support.html">Support Work.Style</a></li><li><a href="{{ page.pre }}careers.html">Write or work with us</a></li>
+    <li><a href="{{ page.pre }}advertise.html">Advertise &amp; sponsor</a></li></ul></div>
+   <div><h4>About</h4><ul>
+    <li><a href="{{ page.pre }}about.html">About &amp; methodology</a></li><li><a href="{{ page.pre }}contact.html">Contact</a></li>
+    <li><a href="{{ page.pre }}privacy.html">Privacy &amp; cookies</a></li><li><a href="{{ page.pre }}terms.html">Terms of use</a></li>
+    <li><a href="{{ page.pre }}disclaimer.html">Disclaimer</a></li><li><a href="{{ page.pre }}trademark.html">Trademark &amp; copyright</a></li>
+    <li><a href="{{ page.pre }}sitemap.html">Site map</a></li></ul></div>
+  </div>
+  <div class="foot-legal">
+   <p>© <span data-year>2026</span> Work.Style. All original content, assessment items, tools and archetype descriptions on this site are protected by copyright.</p>
+   <p>Trademark notice: "Work.Style" is the name of this independent website. It is not affiliated with, endorsed by or connected to any company, product or service that uses "Workstyle", "Work Style" or similar names or marks. All third-party names and marks belong to their respective owners. <a href="{{ page.pre }}trademark.html">Full disclosure</a>.</p>
+   <p>The Work Style Assessment is for self-reflection and education. It is not a psychological, medical or hiring instrument. Ads on this site are served by Google AdSense.</p>
+  </div>
+ </div>
+</footer>
+<div class="consent" id="consent" hidden role="dialog" aria-label="Cookie notice">
+ <p>We use cookies to run this site and, with Google AdSense, to show ads. You can accept personalized ads or limit cookies to essential ones and see non-personalized ads. Read our <a href="{{ page.pre }}privacy.html">privacy policy</a>.</p>
+ <div class="acts"><button class="btn small" data-consent="all">Accept all</button><button class="btn small alt" data-consent="essential">Essential only</button></div>
+</div>
+<script src="{{ page.pre }}assets/js/config.js"></script>
+<script src="{{ page.pre }}assets/js/styles-data.js"></script>
+<script src="{{ page.pre }}assets/js/main.js"></script>
+{{ page.scripts }}
+</body>
+</html>
