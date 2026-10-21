@@ -1,0 +1,28 @@
+---
+layout: "default"
+full_title: "Focus Timer (Pomodoro and Deep Work) | Work.Style"
+description: "A free online focus timer with Pomodoro 25/5, 50/10 and 90-minute deep-work presets."
+canon: "https://work.style/tools/focus-timer.html"
+pre: "../"
+nav_key: "tools/"
+jsonld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Focus Timer (Pomodoro and Deep Work)\", \"applicationCategory\": \"BusinessApplication\", \"operatingSystem\": \"Any\", \"offers\": {\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\"}}</script>"
+extra_head: ""
+scripts: "<script>(function(){var f=25,b=5,left=f*60,run=null,mode=\"focus\",done=0,face=document.getElementById(\"ft-face\"),go=document.getElementById(\"ft-go\");\nfunction draw(){var m=Math.floor(left/60),s=left%60;face.textContent=(m<10?\"0\":\"\")+m+\":\"+(s<10?\"0\":\"\")+s;document.title=face.textContent+\" \"+(mode===\"focus\"?\"Focus\":\"Break\")+\" | Work.Style\";document.getElementById(\"ft-mode\").textContent=mode===\"focus\"?\"Focus\":\"Break\";}\nfunction beep(){try{var a=new (window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator();o.frequency.value=660;o.connect(a.destination);o.start();setTimeout(function(){o.stop();a.close();},400);}catch(e){}}\nfunction sw(){if(mode===\"focus\"){done++;document.getElementById(\"ft-count\").textContent=\"Completed sessions today: \"+done;mode=\"break\";left=b*60;}else{mode=\"focus\";left=f*60;}beep();draw();}\nfunction tick(){left--;if(left<=0)sw();draw();}\ngo.onclick=function(){if(run){clearInterval(run);run=null;go.textContent=\"Resume\";}else{run=setInterval(tick,1000);go.textContent=\"Pause\";}};\ndocument.getElementById(\"ft-reset\").onclick=function(){clearInterval(run);run=null;mode=\"focus\";left=f*60;go.textContent=\"Start\";draw();};\ndocument.getElementById(\"ft-skip\").onclick=function(){sw();};\ndocument.getElementById(\"ft-presets\").addEventListener(\"change\",function(e){var v=e.target.value.split(\",\");f=+v[0];b=+v[1];document.getElementById(\"ft-reset\").click();});\ndraw();})();</script>"
+basetag: ""
+---
+<div class="wrap page-head"><p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Tools</a></p><h1 style="max-width:18ch">Focus Timer (Pomodoro and Deep Work)</h1><p class="lede">A free online focus timer with Pomodoro 25/5, 50/10 and 90-minute deep-work presets.</p></div>
+<div class="wrap"><div class="panel" style="max-width:720px;margin:0 auto">
+ <div class="chips" role="group" aria-label="Timer preset" id="ft-presets">
+  <label><input type="radio" name="p" value="25,5" checked><span>Pomodoro 25 / 5</span></label>
+  <label><input type="radio" name="p" value="50,10"><span>Focus 50 / 10</span></label>
+  <label><input type="radio" name="p" value="90,20"><span>Deep work 90 / 20</span></label>
+  <label><input type="radio" name="p" value="15,3"><span>Quick sprint 15 / 3</span></label>
+ </div>
+ <p class="center" id="ft-mode" style="margin:22px 0 0;font-weight:600">Focus</p>
+ <p class="timer-face" id="ft-face" aria-live="off">25:00</p>
+ <p class="center form-note" id="ft-count">Completed sessions today: 0</p>
+ <div class="center" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn pencil" id="ft-go">Start</button><button class="btn alt" id="ft-reset">Reset</button><button class="btn alt" id="ft-skip">Skip to break</button></div>
+ <p class="form-note center" style="margin-top:16px">Tip: every break is a cue to stand up and look at something far away for 20 seconds.</p>
+</div>
+<div class="article" style="margin:40px 0"><h2>How to use it</h2><p>The timer runs entirely in your browser. Choose the classic Pomodoro rhythm for task-heavy days, 50/10 for writing and analysis, or 90/20 for deep work. Keep this tab open; a short tone plays when each session ends. Learn which rhythm suits you in <a href="../guides/productivity-methods.html">9 productivity methods</a>.</p><p class="form-note">Results are estimates for planning only. Nothing you enter leaves your browser.</p></div>
+<h2>More free tools</h2><div class="grid-3" style="margin-bottom:50px"><a class="tile" href="meeting-cost.html"><h3>Meeting Cost Calculator</h3><p>Calculate what a meeting really costs in salary time — one-off or recurring — and see the yearly total.</p></a><a class="tile" href="commute-savings.html"><h3>Commute Savings Calculator</h3><p>See how many hours and how much money working from home saves each week and year.</p></a><a class="tile" href="desk-setup.html"><h3>Desk and Monitor Height Calculator</h3><p>Get suggested chair, desk and monitor heights for your height, in centimetres or inches.</p></a><a class="tile" href="hybrid-planner.html"><h3>Hybrid Week Planner</h3><p>Plan your home and office days and see your weekly commute time and collaboration balance.</p></a><a class="tile" href="freelance-rate.html"><h3>Freelance Hourly Rate Calculator</h3><p>Work out the hourly rate you need to cover income goals, costs, taxes and time off.</p></a></div></div>

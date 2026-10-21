@@ -1,0 +1,28 @@
+---
+layout: "default"
+full_title: "Desk and Monitor Height Calculator | Work.Style"
+description: "Get suggested chair, desk and monitor heights for your height, in centimetres or inches."
+canon: "https://work.style/tools/desk-setup.html"
+pre: "../"
+nav_key: "tools/"
+jsonld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Desk and Monitor Height Calculator\", \"applicationCategory\": \"BusinessApplication\", \"operatingSystem\": \"Any\", \"offers\": {\"@type\": \"Offer\", \"price\": \"0\", \"priceCurrency\": \"USD\"}}</script>"
+extra_head: ""
+scripts: "<script>(function(){var f=document.getElementById(\"ds\"),h=document.getElementById(\"ds-h\");\nfunction c(){var u=f.querySelector(\"input[name=u]:checked\").value,H=+h.value||0,cm=u===\"in\"?H*2.54:H;\nvar r=function(x){return u===\"in\"?(x/2.54).toFixed(1)+\" in\":Math.round(x)+\" cm\";};\ndocument.getElementById(\"ds-seat\").textContent=r(cm*0.25);document.getElementById(\"ds-desk\").textContent=r(cm*0.41);\ndocument.getElementById(\"ds-stand\").textContent=r(cm*0.63);document.getElementById(\"ds-mon\").textContent=r(cm*0.70);\ndocument.getElementById(\"ds-dist\").textContent=u===\"in\"?\"20–30 in (about an arm's length)\":\"50–75 cm (about an arm's length)\";}\nf.addEventListener(\"change\",function(e){if(e.target.name===\"u\"){h.value=e.target.value===\"in\"?Math.round(h.value/2.54):Math.round(h.value*2.54);h.min=e.target.value===\"in\"?40:100;h.max=e.target.value===\"in\"?90:230;}c();});\nh.addEventListener(\"input\",c);c();})();</script>"
+basetag: ""
+---
+<div class="wrap page-head"><p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Tools</a></p><h1 style="max-width:18ch">Desk and Monitor Height Calculator</h1><p class="lede">Get suggested chair, desk and monitor heights for your height, in centimetres or inches.</p></div>
+<div class="wrap"><div class="calc"><form class="panel form" id="ds" onsubmit="return false">
+ <div class="chips" role="group" aria-label="Units"><label><input type="radio" name="u" value="cm" checked><span>Centimetres</span></label><label><input type="radio" name="u" value="in"><span>Inches</span></label></div>
+ <div><label for="ds-h">Your height</label><input id="ds-h" type="number" min="100" max="230" value="175"></div>
+ <p class="form-note">Estimates from standard body proportions, assuming typical shoes. Fine-tune by checking that your elbows sit at about 90° and your feet rest flat.</p>
+</form>
+<div class="panel pencil" aria-live="polite">
+ <p class="mt0"><strong>Seat height:</strong> <span id="ds-seat"></span></p>
+ <p><strong>Sitting desk height (keyboard surface):</strong> <span id="ds-desk"></span></p>
+ <p><strong>Standing desk height:</strong> <span id="ds-stand"></span></p>
+ <p><strong>Top of monitor, sitting (from floor):</strong> <span id="ds-mon"></span></p>
+ <p><strong>Screen distance:</strong> <span id="ds-dist"></span></p>
+ <p class="form-note">See the full <a href="../guides/home-office-setup.html">ergonomic checklist</a>.</p>
+</div></div>
+<div class="article" style="margin:40px 0"><h2>How to use it</h2><p>Most aches from desk work come from a handful of measurements: seat, desk and screen heights. The results are starting points based on average body proportions; adjust until your elbows are at about 90 degrees, your feet are flat and your neck is neutral.</p><p class="form-note">Results are estimates for planning only. Nothing you enter leaves your browser.</p></div>
+<h2>More free tools</h2><div class="grid-3" style="margin-bottom:50px"><a class="tile" href="meeting-cost.html"><h3>Meeting Cost Calculator</h3><p>Calculate what a meeting really costs in salary time — one-off or recurring — and see the yearly total.</p></a><a class="tile" href="commute-savings.html"><h3>Commute Savings Calculator</h3><p>See how many hours and how much money working from home saves each week and year.</p></a><a class="tile" href="focus-timer.html"><h3>Focus Timer (Pomodoro and Deep Work)</h3><p>A free online focus timer with Pomodoro 25/5, 50/10 and 90-minute deep-work presets.</p></a><a class="tile" href="hybrid-planner.html"><h3>Hybrid Week Planner</h3><p>Plan your home and office days and see your weekly commute time and collaboration balance.</p></a><a class="tile" href="freelance-rate.html"><h3>Freelance Hourly Rate Calculator</h3><p>Work out the hourly rate you need to cover income goals, costs, taxes and time off.</p></a></div></div>
