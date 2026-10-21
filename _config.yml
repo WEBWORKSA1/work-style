@@ -1,0 +1,8 @@
+title: Work.Style
+url: https://work.style
+exclude:
+  - _build
+  - README.md
+  - PROMPTS.md
+  - RESEARCH.md
+  - .gitignore

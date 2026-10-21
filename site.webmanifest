@@ -1,0 +1,15 @@
+{
+ "name": "Work.Style",
+ "short_name": "Work.Style",
+ "start_url": "./index.html",
+ "display": "standalone",
+ "background_color": "#F6F7F4",
+ "theme_color": "#172033",
+ "icons": [
+  {
+   "src": "assets/img/favicon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml"
+  }
+ ]
+}
